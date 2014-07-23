@@ -1,6 +1,7 @@
 <?php
 namespace frontend\controllers;
 
+use frontend\models\ShowContent;
 use Yii;
 use common\models\LoginForm;
 use frontend\models\PasswordResetRequestForm;
@@ -69,6 +70,21 @@ class SiteController extends Controller
     {
         return $this->render('index');
     }
+
+
+    public function actionShowcontent($id)
+    {
+        $model = new ShowContent();
+        if (!$model->load($id)) {
+            die('Error');
+        }
+        return $this->render('showcontent', [
+            'model' => $model,
+        ]);
+    }
+
+
+
 
     public function actionLogin()
     {

@@ -10,6 +10,7 @@ use frontend\widgets\Alert;
 /* @var $content string */
 
 AppAsset::register($this);
+
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -26,17 +27,21 @@ AppAsset::register($this);
     <div class="wrap">
         <?php
             NavBar::begin([
-                'brandLabel' => 'My Company',
+                'brandLabel' => 'Костромская епархия',
                 'brandUrl' => Yii::$app->homeUrl,
                 'options' => [
-                    'class' => 'navbar-inverse navbar-fixed-top',
+                    'class' => 'navbar-inverse navbar-inverse-ke navbar-fixed-top',
                 ],
             ]);
             $menuItems = [
-                ['label' => 'Home', 'url' => ['/site/index']],
-                ['label' => 'About', 'url' => ['/site/about']],
-                ['label' => 'Contact', 'url' => ['/site/contact']],
+				['label' => 'Епархия', 'url' => ['/site/index']],
+				['label' => 'Управляющий епархией', 'url' => ['/principal.html']],
+				['label' => 'Святые', 'url' => ['/saints.html']],
+				['label' => 'Святыни', 'url' => ['/sacred-reliqs.html']],
+				['label' => 'Видеоархив', 'url' => ['/videos.html']],
+				['label' => 'Семинария', 'url' => ['/kostroma-seminary.html']],			
             ];
+			/*
             if (Yii::$app->user->isGuest) {
                 $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
                 $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
@@ -47,6 +52,7 @@ AppAsset::register($this);
                     'linkOptions' => ['data-method' => 'post']
                 ];
             }
+			*/
             echo Nav::widget([
                 'options' => ['class' => 'navbar-nav navbar-right'],
                 'items' => $menuItems,
@@ -65,11 +71,9 @@ AppAsset::register($this);
 
     <footer class="footer">
         <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
-        <p class="pull-right"><?= Yii::powered() ?></p>
+        <p class="pull-left">&copy; Костромская епархия Русской Православной Церкви (Московский Патриархат),  <?= date('Y') ?></p>
         </div>
     </footer>
-
     <?php $this->endBody() ?>
 </body>
 </html>

@@ -1,6 +1,6 @@
 <?php
 return [
-    'adminEmail' => 'admin@example.com',
-    'supportEmail' => 'support@example.com',
+    'adminEmail' => 'nikolay-v-popov@ya.ru',
+    'supportEmail' => 'nikolay-v-popov@ya.ru',
     'user.passwordResetTokenExpire' => 3600,
 ];
