@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50538
 File Encoding         : 65001
 
-Date: 2014-07-23 16:53:16
+Date: 2014-07-24 18:14:34
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -165,8 +165,9 @@ CREATE TABLE `user` (
   `created_at` int(11) NOT NULL,
   `updated_at` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user
 -- ----------------------------
+INSERT INTO `user` VALUES ('1', 'admin', '', '$2y$13$2pWAAzGfO3uINlNXQ7xTIuRJfH5b7PKM116t/3i0XUa6Tz0ntNv3W', null, 'nikolay-v-popov@yandex.ru', '10', '10', '0', '1406199690');
