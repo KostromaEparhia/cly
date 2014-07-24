@@ -3,6 +3,15 @@
 $vendorDir = dirname(__DIR__);
 
 return array (
+  'asofter/yii2-imperavi-redactor' => 
+  array (
+    'name' => 'asofter/yii2-imperavi-redactor',
+    'version' => '9999999-dev',
+    'alias' => 
+    array (
+      '@yii/imperavi' => $vendorDir . '/asofter/yii2-imperavi-redactor/yii/imperavi',
+    ),
+  ),
   'yiisoft/yii2-swiftmailer' => 
   array (
     'name' => 'yiisoft/yii2-swiftmailer',

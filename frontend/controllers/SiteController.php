@@ -1,6 +1,7 @@
 <?php
 namespace frontend\controllers;
 
+use common\models\User;
 use frontend\models\ShowContent;
 use Yii;
 use common\models\LoginForm;

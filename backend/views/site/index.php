@@ -1,9 +1,33 @@
 <?php
 /* @var $this yii\web\View */
 
-$this->title = 'My Yii Application';
+
+
+$this->title = 'Admin.KE';
 ?>
 <div class="site-index">
+
+    <?
+    use yii\imperavi\Widget;
+    echo Widget::widget([
+        // You can either use it for model attribute
+        //'model' => $my_model,
+        'attribute' => 'my_field',
+
+        // or just for input field
+        //'name' => 'my_input_name',
+
+        // Some options, see http://imperavi.com/redactor/docs/
+        'options' => [
+            'toolbar' => true,
+            'css' => 'wym.css',
+        ],
+    ]);
+
+
+
+    ?>
+
 
     <div class="jumbotron">
         <h1>Congratulations!</h1>
